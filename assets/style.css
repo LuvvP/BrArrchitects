@@ -1,0 +1,267 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+#nav{
+    height: 54px;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+}
+
+.nav-list{
+}
+
+.nav-item{
+    line-height: 38px;
+    display: inline-block;
+    letter-spacing: 4px;
+    padding: 0 16px;
+    margin: 8px 0;
+    font-size: 15px;
+}
+
+.nav-item:first-child{
+    margin-left: 12px;
+}
+
+.nav-item:last-child{
+    margin-right: 12px;
+}
+
+.nav-item > a > span{
+    font-weight: 700;
+}
+
+.nav-item:hover{
+    background-color: #ccc;
+}
+
+#slider{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-top: 50%;
+    background: url('./img/slider/slider.jpg') top center / contain no-repeat;
+    max-width: 1500px;
+    margin: auto;
+}
+
+#slider .slider-desc{
+    position: absolute;
+    top: 50%;	
+	left: 50%;
+	transform:translate(-50%, -25%);
+    color: #f1f1f1;
+    letter-spacing: 4px;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1.5;
+}
+
+.slider-desc .span{
+    background-color: rgba(0, 0, 0, 0.8);
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 12px;
+}
+
+#project,#about, #contact, #map{
+    margin: auto;
+    padding: 36px 0 0 0;
+    max-width: 1516px;
+}
+#about, #contact, #map{
+    max-width: 1500px;
+}
+
+.project-list{
+    display: flex;
+    max-width: 1548px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.project-item{
+    width: 25%;
+}
+
+
+#project h2, #about > h2, #contact h2 {
+    display: inline-block;
+    padding: 36px 4px 64px 4px;
+    font-weight: 400;
+}
+
+.project-img{
+    justify-content: space-between;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    padding: 6px 8px;
+}
+
+.project-list div {
+    position: relative;
+}
+
+.project-list p {
+    position: absolute;
+    padding:  8px 16px;
+    top: 6px;
+    left: 8px;
+    background-color: #000;
+    color: #fff;
+}
+
+.contact-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+.contact-item{
+    padding: 48px 8px 0 8px;
+    width: 25%;
+    justify-content: space-between;
+}
+
+.contact-item:first-child{
+    margin-left: 0;
+}
+
+.contact-item:last-child{
+    margin-right: 0;
+}
+
+.contact-item .item-img{
+    width: 100%;
+    filter: grayscale(80%);
+}
+
+.contact-item .contact-name{
+    margin: 15px 0;
+    font-weight: 400;
+}
+.contact-item .contact-position{
+    margin-bottom: 15px ;
+    opacity: 0.6;
+    font-weight: 400;
+}
+.contact-item .contact-desc{
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.contact-item .contact-btn{
+    border: none;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 15px;
+}
+
+.contact-item .contact-btn:hover{
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+#contact h2{
+    padding: 36px 4px 36px 4px;
+}
+
+.input{
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 8px;
+    margin: 16px 0 0 0;
+    font-size: 19px;
+}
+
+.send-btn{
+    padding: 8px 16px;
+    margin-top:  24px;
+    text-transform: uppercase;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.send-btn:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+#map img{
+    margin-top: 24px;
+    width: 100%;
+}
+
+#footer{
+    padding: 24px;
+    width: 100%;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+}
+
+#footer a {
+    color: #fff;
+}
+
+@media only screen and (min-width: 740px) and (max-width: 1023px){
+    
+    .project-item{
+        width: 50%;
+    }
+
+    .contact-item{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 739px) {
+    .nav-more,#slider span{
+        display: none;
+    }
+
+    #slider .span{
+        display: block;
+    }
+    .project-item{
+        width: 100%;
+    }
+
+    .contact-item{
+        width: 100%;
+    }
+    .send-btn{
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    #slider{
+        padding-top: 800px;
+    }
+}
